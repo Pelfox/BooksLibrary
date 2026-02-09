@@ -55,7 +55,7 @@ namespace BooksLibrary
             modelBuilder.Entity<Book>()
                 .ToTable(table => table.HasCheckConstraint("ValidPublishYear", "PublishYear >= 1500"));
             modelBuilder.Entity<Book>()
-                .ToTable(table => table.HasCheckConstraint("ValidQuantityInStock", "QuantityInStock >= 1500"));
+                .ToTable(table => table.HasCheckConstraint("ValidQuantityInStock", "QuantityInStock >= 0"));
         }
 
         private void ConfigureAuthor(ModelBuilder modelBuilder)
